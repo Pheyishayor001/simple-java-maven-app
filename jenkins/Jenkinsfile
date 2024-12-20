@@ -5,18 +5,8 @@ pipeline {
   stages {
     stage('build') {
       steps { 
-        echo "This is build stage"
+        sh 'mvn build package'
       }
-    }
-    stage('test') {
-      steps {
-        echo " This is test stage"
-      }
-    }
-    stage('deploy') {
-      steps {
-        echo " this is deploy stage"
-      }
-    }
+    }    
   }
 }
